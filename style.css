@@ -2,7 +2,7 @@
 
 
 :root {
-    --bgColor: whitesmoke;
+    --bgColor:#45badd;
     --textColor: rgb(22, 22, 22);
     --mainFont: 'Oswald';
 }
@@ -16,4 +16,49 @@ body {
     background-color: var(--bgColor);
     color: var(--textColor);
     font-family: var(--mainFont), Courier, monospace;
+}
+
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('./robot.gif');
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    background-color: red;
+    color: whitesmoke;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgb(202, 5, 5);
+}
+
+button:active {
+    transform: scale(0.8);
+}
+
+/* Media Query: Tablet or Smaller */
+
+@media screen and (max-width: 1000px) {
+    .container {
+        background-size: cover;
+        background-position: center;
+    }
 }
